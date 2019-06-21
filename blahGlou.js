@@ -60,17 +60,17 @@ const glouB = [
 
 //Création de la liste pour le milieu de la phrase de 'Glouglou'
 const glouM = [
-    "je me mets à la recherhe du monde",
-    "le fini ne se distingue de l'infini que par l'imperfection",
-    "il est tombé dans la pomme de terre",
-    "elle ne s'en va pas",
-    "ce sont des robots humanoïdes",
-    "gardez",
-    "de merveilleuses créatures",
-    "avec des fientes",
-    "vaut mieux qu’un poulet",
-    "s'immiscer dans une querelle qui oppose deux visions relatives",
-    "ils me font penser à des animaux légendaires"
+    "je me mets à la recherhe du monde ",
+    "le fini ne se distingue de l'infini que par l'imperfection ",
+    "il est tombé dans la pomme de terre ",
+    "elle ne s'en va pas ",
+    "ce sont des robots humanoïdes ",
+    "gardez ",
+    "de merveilleuses créatures ",
+    "avec des fientes ",
+    "vaut mieux qu’un poulet ",
+    "s'immiscer dans une querelle qui oppose deux visions relatives ",
+    "ils me font penser à des animaux légendaires "
 ];
 
 //Création de la liste pour la fin de la phrase de 'Glouglou'
@@ -91,32 +91,22 @@ const glouE = [
 var blahblah;
 var glouglou;
 var nbCita = prompt("Veuillez choisir le nombre de citation à générer (de 1 à 5)");
-var liste = prompt("veullez choisir la liste blahblah ou glouglou");
+var result = true;
 
-//function geneCita (){
-
-if (nbCita > 5 || nbCita === '') { // si nbCita est plus grand que 5 ou que le champ n'est pas renseigné ("")
-    nbCita = prompt("Veuillez choisir le nombre de citation à générer (de 1 à 5)"); //prompt pour demande le nombre de citation à générer
-} else if (nbCita <= 5 && liste == "blahblah") { //autrement génére les citations grâce à la boucle for
-    for (let i = 0; i < nbCita; i++) {
-        console.log(blahB[Math.floor(Math.random() * blahB.length)] +
-            blahM[Math.floor(Math.random() * blahM.length)] +
-            blahE[Math.floor(Math.random() * blahE.length)]);
-        /* let encore = if (confirm("Voulez-vous continuer?"))
-            if (encore == "y"){
-                geneCita();
-            } else { console.log("bye bye !"); */
-    }
-} else if (nbCita <= 5 && liste == "glouglou") { //autrement génére les citations grâce à la boucle for
-    for (let i = 0; i < nbCita; i++) {
-        console.log(glouB[Math.floor(Math.random() * glouB.length)] +
-            glouM[Math.floor(Math.random() * glouM.length)] +
-            glouE[Math.floor(Math.random() * glouE.length)]);
-        /*   let encore = confirm("Voulez-vous continuer? ( y ou n)");
-           if (encore == "y"){
-               geneCita();
-           } else { console.log("bye bye !"); */
-    }
-}
-;
-//}
+do {
+    switch (prompt('blahblah ou glouglou ?')) {
+        case 'blahblah':
+            for (let i = 0; i < nbCita; i++) {
+                console.log(blahB[Math.floor(Math.random() * blahB.length)] +
+                    blahM[Math.floor(Math.random() * blahM.length)] +
+                    blahE[Math.floor(Math.random() * blahE.length)]);}
+            break;
+        case 'glouglou':
+            for (let i = 0; i < nbCita; i++) {
+                console.log(glouB[Math.floor(Math.random() * glouB.length)] +
+                    glouM[Math.floor(Math.random() * glouM.length)] +
+                    glouE[Math.floor(Math.random() * glouE.length)]);}
+            break;
+                default: console.log('comprends pas...');
+            }
+        } while (result = confirm( "voulez-vous continuer?" ) );
