@@ -1,2 +1,2 @@
 # geneCita
-Générateur de citation aléatoire - OpenClassrooms
+Générateur de citation aléatoire pour OpenClassrooms
